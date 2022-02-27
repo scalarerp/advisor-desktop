@@ -4,7 +4,7 @@
     "name": "Paul Silva",
     "phone": "+1 (978) 687-4404",
     "email": "paul.silva@gmail.com",
-    "dob": "1970-02-14",
+    "dob": "1990-02-14",
     "retirementAge": 67,
     "photo": "https://images.unsplash.com/photo-1568585105565-e372998a195d?w=256&h=256&fit=crop&crop=entropy"
   },
@@ -21,8 +21,8 @@
     "id": "danielle-clark",
     "name": "Danielle Clark",
     "phone": "+1 (312) 565-6564",
-    "email": "danielle-clark@gmail.com",
-    "dob": "1990-06-01",
+    "email": "danielle.clark@gmail.com",
+    "dob": "1983-06-01",
     "retirementAge": 67,
     "photo": "https://images.unsplash.com/photo-1573497161161-c3e73707e25c?w=256&h=256&fit=crop&crop=entropy"
   },
@@ -31,7 +31,7 @@
     "name": "Isa Armstrong",
     "phone": "+1 (747) 900-8844",
     "email": "isa.armstrong@gmail.com",
-    "dob": "1980-04-15",
+    "dob": "1960-04-15",
     "retirementAge": 67,
     "photo": "https://images.unsplash.com/photo-1526080652727-5b77f74eacd2?w=256&h=256&fit=crop&crop=entropy"
   }
