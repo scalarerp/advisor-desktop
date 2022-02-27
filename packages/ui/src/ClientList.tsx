@@ -21,18 +21,18 @@ export function ClientList({
   return (
     <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
       {clients.map((client) => {
-        const labelId = `checkbox-list-secondary-label-${client}`;
+        const { id, name, photo } = client;
         return (
-          <ListItem key={client.id} disablePadding>
+          <ListItem key={id} disablePadding>
             <ListItemButton
-              id={client.id}
-              selected={selectedClientId === client.id}
+              id={id}
+              selected={selectedClientId === id}
               onClick={onClick}
             >
               <ListItemAvatar>
-                <Avatar alt={client.name} src={client.photo} />
+                <Avatar alt={name} src={photo} />
               </ListItemAvatar>
-              <ListItemText primary={client.name} />
+              <ListItemText primary={name} />
             </ListItemButton>
           </ListItem>
         );

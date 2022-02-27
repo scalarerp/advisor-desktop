@@ -39,10 +39,17 @@ type AssetAllocation {
   children: [AssetAllocation!]
 }
 
+type Portfolio {
+  id: ID!
+  name: String!
+}
+
 type Account {
   id: ID!
   name: String!
+  accountNumber: String!
   owner: Client!
+  portfolio: Portfolio!
   cashBalance: Float!
   holdings: [Holding!]!
   orders: [Order!]!

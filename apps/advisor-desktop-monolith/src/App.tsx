@@ -5,6 +5,8 @@ import Paper from '@mui/material/Paper';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import { Header } from 'ui';
+import { AccountsContainer } from './components/AccountsContainer';
+import { InsightsContainer } from './components/InsightsContainer';
 import { ProfileContainer } from './components/ProfileContainer';
 import { Sidebar } from './components/Sidebar';
 import { useClientContext } from './contexts/ClientContext';
@@ -26,7 +28,12 @@ export function App() {
         )}
         {isClientSelected && (
           <Grid container spacing={2}>
-            <Grid item xs={12}>
+            <Grid item xs={12} md={6}>
+              <Paper sx={{ height: '100%' }}>
+                <ProfileContainer />
+              </Paper>
+            </Grid>
+            <Grid item xs={12} md={6}>
               <Paper sx={{ height: '100%' }}>Net Worth</Paper>
             </Grid>
             <Grid item xs={12} md={6}>
@@ -37,11 +44,13 @@ export function App() {
             </Grid>
             <Grid item xs={12} md={6}>
               <Paper sx={{ height: '100%' }}>
-                <ProfileContainer />
+                <AccountsContainer />
               </Paper>
             </Grid>
             <Grid item xs={12} md={6}>
-              <Paper sx={{ height: '100%' }}>Insights</Paper>
+              <Paper sx={{ height: '100%' }}>
+                <InsightsContainer />
+              </Paper>
             </Grid>
           </Grid>
         )}

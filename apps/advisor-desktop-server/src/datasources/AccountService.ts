@@ -11,7 +11,7 @@ export class AccountService extends DataSource {
   initialize() {}
 
   getAccounts(clientId: string) {
-    return accounts.find((account) => account.ownerId === clientId);
+    return accounts.filter((account) => account.ownerId === clientId);
   }
 
   getAccount(accountId: string) {

@@ -20,12 +20,14 @@ export type Scalars = {
 
 export type Account = {
   __typename?: 'Account';
+  accountNumber: Scalars['String'];
   cashBalance: Scalars['Float'];
   holdings: Array<Holding>;
   id: Scalars['ID'];
   name: Scalars['String'];
   orders: Array<Order>;
   owner: Client;
+  portfolio: Portfolio;
 };
 
 export type AssetAllocation = {
@@ -100,6 +102,12 @@ export enum OrderType {
   Limit = 'LIMIT',
   Market = 'MARKET',
 }
+
+export type Portfolio = {
+  __typename?: 'Portfolio';
+  id: Scalars['ID'];
+  name: Scalars['String'];
+};
 
 export type Query = {
   __typename?: 'Query';
