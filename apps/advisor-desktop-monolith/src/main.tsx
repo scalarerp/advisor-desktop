@@ -6,6 +6,7 @@ import { ThemeProvider } from '@mui/material/styles';
 import { createApolloClient } from 'graphql-utils';
 import { theme } from 'ui';
 import { App } from './App';
+import { ClientContextProvider } from './contexts/ClientContext';
 
 // Create Apollo Client
 const apolloClient = createApolloClient(import.meta.env.VITE_API_URL);
@@ -13,11 +14,13 @@ const apolloClient = createApolloClient(import.meta.env.VITE_API_URL);
 ReactDOM.render(
   <React.StrictMode>
     <ApolloProvider client={apolloClient}>
-      <ThemeProvider theme={theme}>
-        {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
-        <CssBaseline />
-        <App />
-      </ThemeProvider>
+      <ClientContextProvider>
+        <ThemeProvider theme={theme}>
+          {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
+          <CssBaseline />
+          <App />
+        </ThemeProvider>
+      </ClientContextProvider>
     </ApolloProvider>
   </React.StrictMode>,
   document.getElementById('root')
