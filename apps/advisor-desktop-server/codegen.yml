@@ -1,0 +1,10 @@
+schema: ./src/schema.graphql
+generates:
+  ../../packages/advisor-models/index.ts:
+    plugins:
+      - typescript
+    config:
+      preResolveTypes: true
+    hooks:
+      afterOneFileWrite:
+        - prettier --write

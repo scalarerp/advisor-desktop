@@ -1,0 +1,106 @@
+enum Side {
+  BUY
+  SELL
+}
+
+enum OrderType {
+  MARKET
+  LIMIT
+}
+
+enum OrderStatus {
+  NEW
+  PLACED
+  EXECUTED
+  CANCELED
+}
+
+type Client {
+  id: ID!
+  name: String!
+  phone: String!
+  email: String!
+  dob: String!
+  retirementAge: Int!
+  photo: String!
+}
+
+type Security {
+  id: ID!
+  name: String!
+  price: Float!
+}
+
+type AssetAllocation {
+  categoryId: String!
+  categoryName: String!
+  value: Float!
+  percentage: Float!
+  children: [AssetAllocation!]
+}
+
+type Account {
+  id: ID!
+  name: String!
+  owner: Client!
+  cashBalance: Float!
+  holdings: [Holding!]!
+  orders: [Order!]!
+}
+
+type Holding {
+  id: ID!
+  security: Security!
+  quantity: Int!
+  account: Account!
+  value: Float!
+}
+
+type Order {
+  id: ID!
+  side: Side!
+  security: Security!
+  quantity: Int!
+  type: OrderType!
+  limitPrice: Float!
+  status: OrderStatus!
+  account: Account!
+  createdAt: String!
+}
+
+input OrderInput {
+  accountId: ID!
+  side: Side!
+  symbol: ID!
+  quantity: Int!
+  type: OrderType!
+  limitPrice: Float!
+}
+
+type Query {
+  "returns all clients"
+  clients: [Client!]!
+
+  "returns the specified client"
+  client(clientId: ID!): Client
+
+  "returns all securities whose id or name matches the query string"
+  securities(query: String!): [Security!]!
+
+  "returns the accounts owned by the speified client"
+  accounts(clientId: ID!): [Account!]!
+
+  "returns the account with the specified accountId"
+  account(accountId: ID!): Account
+
+  "returns the holdings for the specified account"
+  holdings(accountId: ID!): [Holding!]!
+
+  "returns the orders for the specified account"
+  orders(accountId: ID!): [Order!]!
+}
+
+type Mutation {
+  "place a buy or sell order for a security"
+  placeOrder(orderInput: OrderInput!): Order!
+}

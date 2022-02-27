@@ -1,0 +1,13 @@
+{
+  "name": "graphql-utils",
+  "version": "0.0.0",
+  "main": "index.ts",
+  "license": "MIT",
+  "scripts": {
+    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
+  },
+  "devDependencies": {
+    "@apollo/client": "^3.5.9",
+    "typescript": "^4.5.5"
+  }
+}

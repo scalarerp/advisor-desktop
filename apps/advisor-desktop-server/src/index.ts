@@ -1,24 +1,22 @@
-import { createServer } from 'http';
-import { createApp } from './createApp';
+import { readFileSync } from 'fs';
+import path from 'path';
+import { ApolloServer } from 'apollo-server';
+import { dataSources } from './datasources';
+import { resolvers } from './resolvers';
 
-// -----------------------------------------------------------------------------
-// Start the HTTP Server using the Express App
-// -----------------------------------------------------------------------------
-const port = process.env.PORT || 8080;
-const app = createApp();
-const server = createServer(app);
-server.listen(port, () => console.log('Listening on port ' + port));
+const port = parseInt(process.env.API_PORT || '8080', 10);
 
-// -----------------------------------------------------------------------------
-// When SIGINT is received (i.e. Ctrl-C is pressed), shutdown services
-// -----------------------------------------------------------------------------
-process.on('SIGINT', () => {
-  console.log('SIGINT received ...');
+async function startApolloServer() {
+  // read the schema (convert the file Buffer to a UTF-8 string)
+  const typeDefs = readFileSync(
+    path.join(__dirname, './schema.graphql')
+  ).toString('utf-8');
 
-  console.log('Shutting down the server');
-  server.close(() => {
-    console.log('Server stopped ...');
-    console.log('Exiting process ...');
-    process.exit(0);
-  });
-});
+  // start apollo server
+  const server = new ApolloServer({ typeDefs, resolvers, dataSources });
+  const { url } = await server.listen({ port });
+
+  console.log(`Advisor Desktop Server ready at ${url}`);
+}
+
+startApolloServer();

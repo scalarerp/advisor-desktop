@@ -8,8 +8,7 @@
     "limitPrice": 127,
     "status": "PLACED",
     "accountId": "paul-silva-12552",
-    "createdAt": "2021-07-09T14:00:00.000Z",
-    "createdBy": "jsmith"
+    "createdAt": "2021-07-09T14:00:00.000Z"
   },
   {
     "id": "order-002",
@@ -20,8 +19,7 @@
     "limitPrice": null,
     "status": "EXECUTED",
     "accountId": "paul-silva-12552",
-    "createdAt": "2021-07-09T12:00:00.000Z",
-    "createdBy": "jsmith"
+    "createdAt": "2021-07-09T12:00:00.000Z"
   },
   {
     "id": "order-003",
@@ -32,8 +30,7 @@
     "limitPrice": null,
     "status": "EXECUTED",
     "accountId": "paul-silva-12552",
-    "createdAt": "2021-07-02T12:00:00.000Z",
-    "createdBy": "jsmith"
+    "createdAt": "2021-07-02T12:00:00.000Z"
   },
   {
     "id": "order-004",
@@ -44,8 +41,7 @@
     "limitPrice": null,
     "status": "EXECUTED",
     "accountId": "paul-silva-12552",
-    "createdAt": "2021-07-01T12:00:00.000Z",
-    "createdBy": "jsmith"
+    "createdAt": "2021-07-01T12:00:00.000Z"
   },
   {
     "id": "order-005",
@@ -56,8 +52,7 @@
     "limitPrice": null,
     "status": "EXECUTED",
     "accountId": "paul-silva-12552",
-    "createdAt": "2021-06-30T12:00:00.000Z",
-    "createdBy": "jsmith"
+    "createdAt": "2021-06-30T12:00:00.000Z"
   },
   {
     "id": "order-006",
@@ -68,8 +63,7 @@
     "limitPrice": null,
     "status": "EXECUTED",
     "accountId": "paul-silva-12552",
-    "createdAt": "2021-06-29T12:00:00.000Z",
-    "createdBy": "jsmith"
+    "createdAt": "2021-06-29T12:00:00.000Z"
   },
   {
     "id": "order-007",
@@ -80,8 +74,7 @@
     "limitPrice": null,
     "status": "EXECUTED",
     "accountId": "paul-silva-12552",
-    "createdAt": "2021-06-28T12:00:00.000Z",
-    "createdBy": "jsmith"
+    "createdAt": "2021-06-28T12:00:00.000Z"
   },
   {
     "id": "order-008",
@@ -92,8 +85,7 @@
     "limitPrice": null,
     "status": "EXECUTED",
     "accountId": "paul-silva-12552",
-    "createdAt": "2021-06-16T12:00:00.000Z",
-    "createdBy": "jsmith"
+    "createdAt": "2021-06-16T12:00:00.000Z"
   },
   {
     "id": "order-009",
@@ -104,8 +96,7 @@
     "limitPrice": null,
     "status": "EXECUTED",
     "accountId": "paul-silva-12552",
-    "createdAt": "2021-06-15T12:00:00.000Z",
-    "createdBy": "jsmith"
+    "createdAt": "2021-06-15T12:00:00.000Z"
   },
   {
     "id": "order-010",
@@ -116,8 +107,7 @@
     "limitPrice": null,
     "status": "EXECUTED",
     "accountId": "paul-silva-12552",
-    "createdAt": "2021-06-14T12:00:00.000Z",
-    "createdBy": "jsmith"
+    "createdAt": "2021-06-14T12:00:00.000Z"
   },
   {
     "id": "order-011",
@@ -128,8 +118,7 @@
     "limitPrice": null,
     "status": "EXECUTED",
     "accountId": "paul-silva-12552",
-    "createdAt": "2021-06-13T12:00:00.000Z",
-    "createdBy": "jsmith"
+    "createdAt": "2021-06-13T12:00:00.000Z"
   },
   {
     "id": "order-012",
@@ -140,8 +129,7 @@
     "limitPrice": null,
     "status": "EXECUTED",
     "accountId": "paul-silva-12552",
-    "createdAt": "2021-06-09T12:00:00.000Z",
-    "createdBy": "jsmith"
+    "createdAt": "2021-06-09T12:00:00.000Z"
   },
   {
     "id": "order-013",
@@ -152,8 +140,7 @@
     "limitPrice": null,
     "status": "EXECUTED",
     "accountId": "paul-silva-12552",
-    "createdAt": "2021-06-08T12:00:00.000Z",
-    "createdBy": "jsmith"
+    "createdAt": "2021-06-08T12:00:00.000Z"
   },
   {
     "id": "order-014",
@@ -164,8 +151,7 @@
     "limitPrice": null,
     "status": "EXECUTED",
     "accountId": "paul-silva-12552",
-    "createdAt": "2021-06-07T12:00:00.000Z",
-    "createdBy": "jsmith"
+    "createdAt": "2021-06-07T12:00:00.000Z"
   },
   {
     "id": "order-015",
@@ -176,8 +162,7 @@
     "limitPrice": null,
     "status": "EXECUTED",
     "accountId": "paul-silva-12552",
-    "createdAt": "2021-06-06T12:00:00.000Z",
-    "createdBy": "jsmith"
+    "createdAt": "2021-06-06T12:00:00.000Z"
   },
   {
     "id": "order-016",
@@ -188,7 +173,6 @@
     "limitPrice": null,
     "status": "EXECUTED",
     "accountId": "paul-silva-28742",
-    "createdAt": "2021-06-05T12:00:00.000Z",
-    "createdBy": "jsmith"
+    "createdAt": "2021-06-05T12:00:00.000Z"
   }
 ]
