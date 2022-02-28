@@ -1,29 +1,29 @@
 [
   {
     "id": "paul-silva-12552",
-    "accountNumber": "XXX-12552",
     "name": "Paul Silva Traditional IRA",
+    "accountNumber": "XXX-12552",
     "ownerId": "paul-silva",
     "portfolioId": "paul-silva-retirement-portfolio"
   },
   {
     "id": "paul-silva-28742",
-    "accountNumber": "XXX-28742",
     "name": "Paul Silva Traditional IRA",
+    "accountNumber": "XXX-28742",
     "ownerId": "paul-silva",
     "portfolioId": "paul-silva-retirement-portfolio"
   },
   {
     "id": "paul-silva-87424",
-    "accountNumber": "XXX-87424",
     "name": "Paul Silva Roth IRA",
+    "accountNumber": "XXX-87424",
     "ownerId": "paul-silva",
     "portfolioId": "paul-silva-retirement-portfolio"
   },
   {
     "id": "ashley-silva-73215",
-    "accountNumber": "XXX-73215",
     "name": "Ashley Silva Traditional IRA",
+    "accountNumber": "XXX-73215",
     "ownerId": "paul-silva",
     "portfolioId": "paul-silva-retirement-portfolio"
   }

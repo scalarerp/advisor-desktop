@@ -8,7 +8,8 @@
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
   },
   "dependencies": {
-    "advisor-models": "*"
+    "advisor-models": "*",
+    "number-utils": "*"
   },
   "devDependencies": {
     "@emotion/cache": "^11.7.1",

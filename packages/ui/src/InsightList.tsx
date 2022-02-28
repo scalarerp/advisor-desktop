@@ -9,7 +9,7 @@ const List = styled('ul')({
   marginBottom: 8,
 });
 
-export function ClientInsights() {
+export function InsightList() {
   return (
     <Box sx={{ p: 1 }}>
       <Typography variant="h5" component="h2" gutterBottom>

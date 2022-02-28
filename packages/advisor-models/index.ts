@@ -21,9 +21,11 @@ export type Scalars = {
 export type Account = {
   __typename?: 'Account';
   accountNumber: Scalars['String'];
+  assetAllocations: Array<AssetAllocation>;
   cashBalance: Scalars['Float'];
   holdings: Array<Holding>;
   id: Scalars['ID'];
+  investmentTotal: Scalars['Float'];
   name: Scalars['String'];
   orders: Array<Order>;
   owner: Client;
@@ -41,9 +43,12 @@ export type AssetAllocation = {
 
 export type Client = {
   __typename?: 'Client';
+  assetAllocations: Array<AssetAllocation>;
+  cashBalance: Scalars['Float'];
   dob: Scalars['String'];
   email: Scalars['String'];
   id: Scalars['ID'];
+  investmentTotal: Scalars['Float'];
   name: Scalars['String'];
   phone: Scalars['String'];
   photo: Scalars['String'];

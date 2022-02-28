@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { ClientInsights } from 'ui';
+import { InsightList } from 'ui';
 
 export function InsightsContainer() {
-  return <ClientInsights />;
+  return <InsightList />;
 }

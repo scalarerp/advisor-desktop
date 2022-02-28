@@ -2,6 +2,7 @@ import { DataSource } from 'apollo-datasource';
 import industries from './data/industries.json';
 import sectors from './data/sectors.json';
 import securities from './data/securities.json';
+import { RawHolding } from './models';
 
 export class SecurityService extends DataSource {
   constructor() {
@@ -28,5 +29,14 @@ export class SecurityService extends DataSource {
 
   getIndustry(id: string) {
     return industries.find((industry) => industry.id === id);
+  }
+
+  getInvestmentTotal(holdings: Array<RawHolding>) {
+    return holdings.reduce((accumulator: number, holding: RawHolding) => {
+      const security = this.getSecurity(holding.symbol);
+      return security
+        ? accumulator + security.price * holding.quantity
+        : accumulator;
+    }, 0);
   }
 }

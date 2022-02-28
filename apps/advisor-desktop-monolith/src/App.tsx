@@ -7,6 +7,7 @@ import Typography from '@mui/material/Typography';
 import { Header } from 'ui';
 import { AccountsContainer } from './components/AccountsContainer';
 import { InsightsContainer } from './components/InsightsContainer';
+import { NetWorthContainer } from './components/NetWorthContainer';
 import { ProfileContainer } from './components/ProfileContainer';
 import { Sidebar } from './components/Sidebar';
 import { useClientContext } from './contexts/ClientContext';
@@ -34,7 +35,9 @@ export function App() {
               </Paper>
             </Grid>
             <Grid item xs={12} md={6}>
-              <Paper sx={{ height: '100%' }}>Net Worth</Paper>
+              <Paper sx={{ height: '100%' }}>
+                <NetWorthContainer />
+              </Paper>
             </Grid>
             <Grid item xs={12} md={6}>
               <Paper sx={{ height: '100%' }}>Asset Allocation</Paper>

@@ -120,6 +120,20 @@ export const resolvers = {
     },
   },
 
+  Client: {
+    cashBalance({ id }, args, { dataSources }) {
+      const balance = dataSources.accountService.getClientCashBalance(id);
+      return balance ? balance : 0;
+    },
+
+    investmentTotal({ id }, args, { dataSources }) {
+      const { accountService, securityService } = dataSources;
+
+      const holdings = accountService.getClientHoldings(id);
+      return securityService.getInvestmentTotal(holdings);
+    },
+  },
+
   Account: {
     cashBalance({ id }, args, { dataSources }) {
       const balance = dataSources.accountService.getAccountCashBalance(id);

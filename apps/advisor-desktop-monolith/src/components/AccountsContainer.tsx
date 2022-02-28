@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { gql, useQuery } from '@apollo/client';
-import { ClientAccounts } from 'ui';
+import { AccountList } from 'ui';
 import { useClientContext } from '../contexts/ClientContext';
 
 const GetAccounts = gql`
@@ -29,7 +29,5 @@ export function AccountsContainer() {
     console.log(`Account ${e.currentTarget.id}`);
   };
 
-  return (
-    <ClientAccounts accounts={data.accounts} onClick={handleAccountClick} />
-  );
+  return <AccountList accounts={data.accounts} onClick={handleAccountClick} />;
 }

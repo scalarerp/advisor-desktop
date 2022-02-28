@@ -9,12 +9,12 @@ import Typography from '@mui/material/Typography';
 import { Account } from 'advisor-models';
 import { Divider } from '@mui/material';
 
-interface ClientAccountProps {
+interface AccountListProps {
   accounts: Array<Account>;
   onClick: React.MouseEventHandler<HTMLButtonElement>;
 }
 
-export function ClientAccounts({ accounts, onClick }: ClientAccountProps) {
+export function AccountList({ accounts, onClick }: AccountListProps) {
   return (
     <Box sx={{ p: 1 }}>
       <Typography variant="h5" component="h2">
