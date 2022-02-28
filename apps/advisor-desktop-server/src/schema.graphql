@@ -15,6 +15,16 @@ enum OrderStatus {
   CANCELED
 }
 
+type DataPoint {
+  x: Float!
+  y: Float!
+}
+
+type Series {
+  name: String!
+  data: [DataPoint!]!
+}
+
 type Client {
   id: ID!
   name: String!
@@ -26,6 +36,7 @@ type Client {
   cashBalance: Float!
   investmentTotal: Float!
   assetAllocations: [AssetAllocation!]!
+  performance: [Series!]!
 }
 
 type Security {

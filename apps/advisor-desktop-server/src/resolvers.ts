@@ -132,6 +132,10 @@ export const resolvers = {
       const holdings = accountService.getClientHoldings(id);
       return securityService.getInvestmentTotal(holdings);
     },
+
+    performance({ id }, args, { dataSources }) {
+      return dataSources.clientService.getClientPerformance(id);
+    },
   },
 
   Account: {

@@ -4,9 +4,12 @@ import { ApolloProvider } from '@apollo/client';
 import CssBaseline from '@mui/material/CssBaseline';
 import { ThemeProvider } from '@mui/material/styles';
 import { createApolloClient } from 'graphql-utils';
-import { theme } from 'ui';
+import { setChartOptions, theme } from 'ui';
 import { App } from './App';
 import { ClientContextProvider } from './contexts/ClientContext';
+
+// Initialize charts
+setChartOptions();
 
 // Create Apollo Client
 const apolloClient = createApolloClient(import.meta.env.VITE_API_URL);

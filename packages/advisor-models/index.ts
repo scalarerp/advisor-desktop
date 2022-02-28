@@ -50,9 +50,16 @@ export type Client = {
   id: Scalars['ID'];
   investmentTotal: Scalars['Float'];
   name: Scalars['String'];
+  performance: Array<Series>;
   phone: Scalars['String'];
   photo: Scalars['String'];
   retirementAge: Scalars['Int'];
+};
+
+export type DataPoint = {
+  __typename?: 'DataPoint';
+  x: Scalars['Float'];
+  y: Scalars['Float'];
 };
 
 export type Holding = {
@@ -161,6 +168,12 @@ export type Security = {
   id: Scalars['ID'];
   name: Scalars['String'];
   price: Scalars['Float'];
+};
+
+export type Series = {
+  __typename?: 'Series';
+  data: Array<DataPoint>;
+  name: Scalars['String'];
 };
 
 export enum Side {

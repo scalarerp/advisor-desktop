@@ -8,6 +8,7 @@ import { Header } from 'ui';
 import { AccountsContainer } from './components/AccountsContainer';
 import { InsightsContainer } from './components/InsightsContainer';
 import { NetWorthContainer } from './components/NetWorthContainer';
+import { PerformanceChartContainer } from './components/PerformanceChartContainer';
 import { ProfileContainer } from './components/ProfileContainer';
 import { Sidebar } from './components/Sidebar';
 import { useClientContext } from './contexts/ClientContext';
@@ -40,10 +41,12 @@ export function App() {
               </Paper>
             </Grid>
             <Grid item xs={12} md={6}>
-              <Paper sx={{ height: '100%' }}>Asset Allocation</Paper>
+              <Paper sx={{ height: 388 }}>Asset Allocation</Paper>
             </Grid>
             <Grid item xs={12} md={6}>
-              <Paper sx={{ height: '100%' }}>Goals</Paper>
+              <Paper sx={{ height: 388 }}>
+                <PerformanceChartContainer />
+              </Paper>
             </Grid>
             <Grid item xs={12} md={6}>
               <Paper sx={{ height: '100%' }}>
