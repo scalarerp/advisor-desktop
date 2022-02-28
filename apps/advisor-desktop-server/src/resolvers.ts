@@ -133,6 +133,13 @@ export const resolvers = {
       return securityService.getInvestmentTotal(holdings);
     },
 
+    assetAllocations({ id }, args, { dataSources }) {
+      const { accountService, securityService } = dataSources;
+
+      const holdings = accountService.getClientHoldings(id);
+      return securityService.getAssetAllocations(holdings);
+    },
+
     performance({ id }, args, { dataSources }) {
       return dataSources.clientService.getClientPerformance(id);
     },

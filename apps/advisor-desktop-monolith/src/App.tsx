@@ -5,6 +5,7 @@ import Paper from '@mui/material/Paper';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import { Header } from 'ui';
+import { AssetAllocationChartContainer } from './components/AssetAllocationChartContainer';
 import { AccountsContainer } from './components/AccountsContainer';
 import { InsightsContainer } from './components/InsightsContainer';
 import { NetWorthContainer } from './components/NetWorthContainer';
@@ -41,7 +42,9 @@ export function App() {
               </Paper>
             </Grid>
             <Grid item xs={12} md={6}>
-              <Paper sx={{ height: 388 }}>Asset Allocation</Paper>
+              <Paper sx={{ height: 388 }}>
+                <AssetAllocationChartContainer />
+              </Paper>
             </Grid>
             <Grid item xs={12} md={6}>
               <Paper sx={{ height: 388 }}>
