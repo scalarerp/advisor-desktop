@@ -9,7 +9,7 @@ import drilldown from 'highcharts/modules/drilldown';
 drilldown(Highcharts);
 
 export interface PieChartProps {
-  title: string;
+  title?: string;
   series: SeriesPieOptions[];
   drilldown: DrilldownOptions;
 }

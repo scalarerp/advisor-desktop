@@ -19,28 +19,18 @@ export function NetWorthView({
   cashBalance,
 }: NetWorthViewProps) {
   return (
-    <Box sx={{ p: 1, display: 'flex' }}>
-      {/* from xs to lg, show large font */}
-      <Box sx={{ display: { xs: 'block', lg: 'none' } }}>
-        <LabelValue
-          label="Net Worth"
-          value={investmentTotal + cashBalance}
-          isLarge={true}
-        />
-      </Box>
-
-      {/* from large up, switch to small font */}
-      <Box sx={{ display: { xs: 'none', lg: 'block' } }}>
+    <Box sx={{ p: 2, display: 'flex' }}>
+      <Box>
         <LabelValue label="Net Worth" value={investmentTotal + cashBalance} />
       </Box>
 
-      {/* show from large up */}
-      <Box ml={4} sx={{ display: { xs: 'none', lg: 'block' } }}>
+      {/* show from small up */}
+      <Box ml={4} sx={{ display: { xs: 'none', sm: 'block' } }}>
         <LabelValue label="Investments" value={investmentTotal} />
       </Box>
 
-      {/* show from large up */}
-      <Box ml={4} sx={{ display: { xs: 'none', lg: 'block' } }}>
+      {/* show from medium up */}
+      <Box ml={4} sx={{ display: { xs: 'none', md: 'block' } }}>
         <LabelValue label="Cash" value={cashBalance} />
       </Box>
     </Box>
@@ -50,31 +40,29 @@ export function NetWorthView({
 interface LabelValueProps {
   label: string;
   value: number;
-  isLarge?: boolean;
 }
 
-function LabelValue({ label, value, isLarge = false }: LabelValueProps) {
+function LabelValue({ label, value }: LabelValueProps) {
   return (
     <React.Fragment>
       <Typography
         variant="body2"
         component="h2"
-        sx={{ textTransform: 'uppercase' }}
+        sx={{ fontSize: '1rem', color: 'text.secondary' }}
       >
         {label}
       </Typography>
 
-      {!isLarge && (
-        <Typography sx={{ fontSize: '1.25rem', lineHeight: 1.25 }}>
-          ${NumberUtils.formatAsMoney(value)}
-        </Typography>
-      )}
-
-      {isLarge && (
-        <Typography sx={{ fontSize: '1.75rem', lineHeight: 1.25 }}>
-          ${NumberUtils.formatAsMoney(value)}
-        </Typography>
-      )}
+      <Typography
+        sx={{
+          fontSize: '1.375rem',
+          fontWeight: '500',
+          lineHeight: 1.25,
+          color: '#6366F1',
+        }}
+      >
+        ${NumberUtils.formatAsMoney(value)}
+      </Typography>
     </React.Fragment>
   );
 }

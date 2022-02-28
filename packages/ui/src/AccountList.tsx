@@ -16,8 +16,12 @@ interface AccountListProps {
 
 export function AccountList({ accounts, onClick }: AccountListProps) {
   return (
-    <Box sx={{ p: 1 }}>
-      <Typography variant="h5" component="h2">
+    <Box sx={{ p: 2 }}>
+      <Typography
+        variant="h5"
+        component="h2"
+        sx={{ fontSize: '1.25rem', fontWeight: '400' }}
+      >
         Accounts
       </Typography>
       {accounts.length === 0 && <Typography>Client has no accounts</Typography>}

@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { LineChart } from './LineChart';
 import { Series } from 'advisor-models';
+import { LineChart } from './LineChart';
 
 interface PerformanceChartProps {
   performance: Array<Series>;

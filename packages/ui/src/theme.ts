@@ -5,7 +5,7 @@ import { red } from '@mui/material/colors';
 export const theme = createTheme({
   palette: {
     primary: {
-      main: '#556CD6',
+      main: '#1F2937',
     },
     secondary: {
       main: '#FBC02D',
@@ -13,5 +13,8 @@ export const theme = createTheme({
     error: {
       main: red.A400,
     },
+  },
+  typography: {
+    fontFamily: ['Fira Sans', 'Helvetica', 'Arial', 'sans-serif'].join(','),
   },
 });

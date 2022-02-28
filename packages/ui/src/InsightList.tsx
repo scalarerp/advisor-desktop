@@ -11,12 +11,16 @@ const List = styled('ul')({
 
 export function InsightList() {
   return (
-    <Box sx={{ p: 1 }}>
-      <Typography variant="h5" component="h2" gutterBottom>
+    <Box sx={{ p: 2 }}>
+      <Typography
+        variant="h5"
+        component="h2"
+        sx={{ fontSize: '1.25rem', fontWeight: '400' }}
+      >
         Insights
       </Typography>
 
-      <Box sx={{ display: 'flex' }}>
+      <Box sx={{ display: 'flex', mt: 2 }}>
         <Divider
           orientation="vertical"
           sx={{ mr: 1, borderRightWidth: 4, borderRightColor: 'primary.main' }}
@@ -40,7 +44,7 @@ export function InsightList() {
         </Box>
       </Box>
 
-      <Box sx={{ display: 'flex', mt: 2 }}>
+      <Box sx={{ display: 'flex', mt: 3 }}>
         <Divider
           orientation="vertical"
           sx={{ mr: 1, borderRightWidth: 4, borderRightColor: 'primary.main' }}

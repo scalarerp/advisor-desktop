@@ -3,7 +3,7 @@ import Highcharts, { Options } from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
 
 export interface LineChartProps {
-  title: string;
+  title?: string;
   series: any;
 }
 

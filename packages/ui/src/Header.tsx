@@ -1,7 +1,5 @@
 import * as React from 'react';
 import AppBar from '@mui/material/AppBar';
-import IconButton from '@mui/material/IconButton';
-import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 
@@ -15,11 +13,13 @@ export function Header({ title }: HeaderProps) {
       position="fixed"
       sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}
     >
-      <Toolbar>
-        <IconButton size="large" edge="start" color="inherit">
-          <MenuIcon />
-        </IconButton>
-        <Typography variant="h6" noWrap component="div">
+      <Toolbar variant="dense">
+        <Typography
+          variant="h6"
+          component="div"
+          noWrap
+          sx={{ fontSize: '1.125rem' }}
+        >
           {title}
         </Typography>
       </Toolbar>

@@ -1,7 +1,6 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
-import Paper from '@mui/material/Paper';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import { Header } from 'ui';
@@ -13,6 +12,11 @@ import { PerformanceChartContainer } from './components/PerformanceChartContaine
 import { ProfileContainer } from './components/ProfileContainer';
 import { Sidebar } from './components/Sidebar';
 import { useClientContext } from './contexts/ClientContext';
+
+const boxShadow =
+  '0px 11px 4px rgba(0, 0, 0, 0.01), 0px 6px 4px rgba(0, 0, 0, 0.05), 0px 3px 3px rgba(0, 0, 0, 0.08), 0px 1px 1px rgba(0, 0, 0, 0.09), 0px 0px 0px rgba(0, 0, 0, 0.1)';
+
+const border = '1px solid #F0F0F0';
 
 export function App() {
   const { clientId } = useClientContext();
@@ -31,35 +35,35 @@ export function App() {
         )}
         {isClientSelected && (
           <Grid container spacing={2}>
-            <Grid item xs={12} md={6}>
-              <Paper sx={{ height: '100%' }}>
+            <Grid item xs={6}>
+              <Box sx={{ height: '100%', boxShadow, border }}>
                 <ProfileContainer />
-              </Paper>
+              </Box>
             </Grid>
-            <Grid item xs={12} md={6}>
-              <Paper sx={{ height: '100%' }}>
+            <Grid item xs={12}>
+              <Box sx={{ height: '100%', boxShadow, border }}>
                 <NetWorthContainer />
-              </Paper>
+              </Box>
             </Grid>
             <Grid item xs={12} md={6}>
-              <Paper sx={{ height: 388 }}>
+              <Box sx={{ height: 388, boxShadow, border }}>
                 <AssetAllocationChartContainer />
-              </Paper>
+              </Box>
             </Grid>
             <Grid item xs={12} md={6}>
-              <Paper sx={{ height: 388 }}>
+              <Box sx={{ height: 388, boxShadow, border }}>
                 <PerformanceChartContainer />
-              </Paper>
+              </Box>
             </Grid>
             <Grid item xs={12} md={6}>
-              <Paper sx={{ height: '100%' }}>
+              <Box sx={{ height: '100%', boxShadow, border }}>
                 <AccountsContainer />
-              </Paper>
+              </Box>
             </Grid>
             <Grid item xs={12} md={6}>
-              <Paper sx={{ height: '100%' }}>
+              <Box sx={{ height: '100%', boxShadow, border }}>
                 <InsightsContainer />
-              </Paper>
+              </Box>
             </Grid>
           </Grid>
         )}
